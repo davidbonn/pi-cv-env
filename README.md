@@ -1,6 +1,7 @@
 # Pi Base
 
-Scripts and artifacts used to build the base raspberry pi environment
+Scripts and artifacts used to build the base raspberry pi environment.
+These tools will build you a base opencv/scikit-learn environment that is boots readonly to save the life of your SD card.
 
 ## What's here
 
@@ -47,6 +48,10 @@ Then cross your fingers and reboot.
 
 There is also an `everything.sh` script that runs the above, use it if you
 are brave.  Takes a little over four hours on a 1GB Pi4.
+
+There are `ro` and `rw` aliases included that enable read-write mode or reset to read-only mode.
+Before you make any changes to the filesystem you MUST run `rw`.  Logging out will reset it to read-only,
+or you can use the included `ro` alias.
 
 ## Stuff not fully done
 

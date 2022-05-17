@@ -1,0 +1,17 @@
+Cython
+ecdsa
+Flask
+geojson
+gpiozero
+JSON-minify
+numpy
+Pillow
+pexpect
+picamera[array]
+py-spy
+PyJWT
+redis[hiredis]
+requests
+RPi.GPIO
+rq
+scikit-learn

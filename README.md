@@ -20,13 +20,20 @@ Scripts and artifacts used to build the base raspberry pi environment
 
 ## Commands to run.
 
-First, set swap space to 2048MB in `/etc/dphys-swapfile`.  You need to do that manually.
+Make a flash image on a micro SD card.  See below for what I started with.
 
+After you flash, add an appropriate `wpa_supplicant.conf` to /boot.
+
+After you flash, make an empty file called `ssh` in /boot.
+
+Boot the pi with the flash image you just cut, ssh to it and log in (user is `pi` and default password is `raspberry`).
+
+Set swap space to 2048MB in `/etc/dphys-swapfile`.  You need to do that manually.
 
 Upload `pi_base.tar.gz` to `/home/pi`.  Use `mk_pi_base.sh` to make
 `pi_base.tar.gz`.
 
-ssh to your pi and untar `pi_base.tar.gz` in `/home/pi`
+Untar `pi_base.tar.gz` in `/home/pi`
 
 Run the following:
 1. `bash ./initialize.sh`
@@ -41,7 +48,7 @@ Then cross your fingers and reboot.
 There is also an `everything.sh` script that runs the above, use it if you
 are brave.  Takes a little over four hours on a 1GB Pi4.
 
-## Stuff not here
+## Stuff not fully done
 
 I downloaded the starter image from https://www.raspberrypi.com/software/operating-systems/ , in particular I grabbed the "Raspberry Pi OS Lite (Legacy) Release date: April 4th 2022" image, approximately 284MB in size.
 
@@ -55,8 +62,6 @@ Downloads sometimes time out.  It sucks.
 Checking to make sure you are starting from Rasbian Buster (32-bit).
 
 Probably want to run pishrink on the resultant SD card image afterwards to fit in the smallest possible SD card.
-
-I'd like to factor a lot of this out so I can open source some of the scripts.
 
 On `pyenv`.  If you add more packages you'll need to sometimes do a `pyenv rehash` manually since we are typically running readonly.  Best to explicitly do it after adding packages.
 

@@ -16,6 +16,7 @@ These tools will build you a base opencv/scikit-learn environment that boots rea
 * `build_pyenv.sh` -- installs *pyenv*, python 3.9.6 and packages to make *opencv* virtual environment
 * `build_misc.py` -- fixes up various things needing fixing
 * `make_readonly.sh` -- builds a readonly filesystem on top of all this
+* `everything.sh` -- runs the previous four scripts
 * `ro_helper.py` -- helper script called by `make_readonly.py`
 * `mk_pi_base.sh` -- builds pi_base.tar.gz to be marshalled to new pi
 

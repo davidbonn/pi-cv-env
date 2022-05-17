@@ -3,8 +3,8 @@
 # build pyenv
 # tweak .bashrc
 # install python 3.9.6
-# make virtual environment for deepseek
-# install all packages for deepseek
+# make virtual environment 
+# install all packages for venv
 
 if [ -d $HOME/.pyenv ]; then
   exit 0

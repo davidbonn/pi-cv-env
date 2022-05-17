@@ -1,7 +1,7 @@
-# Pi Base
+# Pi CV Environment
 
-Scripts and artifacts used to build the base raspberry pi environment.
-These tools will build you a base opencv/scikit-learn environment that is boots readonly to save the life of your SD card.
+Scripts and artifacts used to build the base raspberry pi computer vision environment.
+These tools will build you a base opencv/scikit-learn environment that boots readonly to increase the life of your SD card.
 
 ## What's here
 
@@ -13,9 +13,9 @@ These tools will build you a base opencv/scikit-learn environment that is boots 
 * `configs` -- system config files to install
 * `examples` -- example program directory
 * `initialize.sh` -- installs *apt* packages we need, well most of them
-* `build_pyenv.sh` -- installs *pyenv*, python 3.9.6 and packages to make *deepseek* virtual environment
+* `build_pyenv.sh` -- installs *pyenv*, python 3.9.6 and packages to make *opencv* virtual environment
 * `build_misc.py` -- fixes up various things needing fixing
-* `make_readonly.sh` -- builds a readonly filesystem on top of this all
+* `make_readonly.sh` -- builds a readonly filesystem on top of all this
 * `ro_helper.py` -- helper script called by `make_readonly.py`
 * `mk_pi_base.sh` -- builds pi_base.tar.gz to be marshalled to new pi
 
